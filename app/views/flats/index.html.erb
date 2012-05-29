@@ -1,0 +1,12 @@
+<h1>Квартиры</h1>
+<% @flats.each do |flat| %>
+  <div>
+    <%= flat.country %>,
+    <%= flat.city %>,
+    <%= flat.street %>,
+    <%= flat.home_number %>,
+    <%= flat.flat_number %>
+    <%= link_to 'Show', '#' %>
+  </div>
+<% end %>
+<%= will_paginate @flats %>

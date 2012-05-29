@@ -36,3 +36,12 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'simple_form'
+gem 'will_paginate'
+group :test do
+  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'cucumber'
+  gem 'capybara'
+  gem 'database_cleaner'
+end

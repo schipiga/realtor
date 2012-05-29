@@ -1,4 +1,7 @@
 Realtor::Application.routes.draw do
+
+  root :to => 'flats#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
