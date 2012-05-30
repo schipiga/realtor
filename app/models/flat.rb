@@ -1,3 +1,6 @@
 class Flat < ActiveRecord::Base
-  attr_accessible :city, :country, :flat_number, :home_number, :street
+
+  has_many :images
+
+  attr_accessible :city, :country, :flat_number, :home_number, :street, :price, :description
 end

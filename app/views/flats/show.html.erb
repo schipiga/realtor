@@ -1,0 +1,18 @@
+<%= link_to 'Back', :back %>
+<h3>Price:</h3>
+<%= @flat.price %>
+<h3>Address:</h3>
+<div>
+  <%= @flat.country %>,
+  <%= @flat.city %>,
+  <%= @flat.street %>,
+  <%= @flat.home_number %>,
+  <%= @flat.flat_number %>
+</div>
+<h3>Description:</h3>
+<%= @flat.description %>
+
+<h3>Images:</h3>
+<% @flat.images.each do |image| %>
+  <%= image_tag image.photo.url(:thumb) %>
+<% end %>

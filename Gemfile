@@ -38,6 +38,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem 'simple_form'
 gem 'will_paginate'
+gem 'paperclip'
 group :test do
   gem 'factory_girl'
   gem 'factory_girl_rails'

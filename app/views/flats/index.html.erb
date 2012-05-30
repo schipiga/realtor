@@ -6,7 +6,7 @@
     <%= flat.street %>,
     <%= flat.home_number %>,
     <%= flat.flat_number %>
-    <%= link_to 'Show', '#' %>
+    <%= link_to 'Show', flat_path(flat) %>
   </div>
 <% end %>
 <%= will_paginate @flats %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120528203959) do
+ActiveRecord::Schema.define(:version => 20120530180912) do
 
   create_table "flats", :force => true do |t|
     t.string   "country"
@@ -21,6 +21,18 @@ ActiveRecord::Schema.define(:version => 20120528203959) do
     t.string   "flat_number"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "price"
+    t.text     "description"
+  end
+
+  create_table "images", :force => true do |t|
+    t.integer  "flat_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end
