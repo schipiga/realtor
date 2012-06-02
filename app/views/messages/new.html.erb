@@ -1,0 +1,13 @@
+<%= simple_form_for @message do |f| %>
+  <%= f.hidden_field :flat_id,
+                     :value => @message.flat_id %>
+  <%= f.input :title,
+              :input_html => {
+                :value => 'Please, book me this flat'
+              } %>
+  <%= f.input :description,
+              :input_html => {
+                :value => "I want to book this flat\n#{flat_url(@message.flat_id)}"
+              } %>
+  <%= f.submit 'Book' %>
+<% end %>

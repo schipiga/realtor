@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120530180912) do
+ActiveRecord::Schema.define(:version => 20120530192023) do
 
   create_table "flats", :force => true do |t|
     t.string   "country"
@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(:version => 20120530180912) do
     t.datetime "photo_updated_at"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "flat_id"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

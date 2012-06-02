@@ -2,6 +2,8 @@ Realtor::Application.routes.draw do
 
   resources :flats, :only => [:index, :show]
 
+  resources :messages, :only => [:new, :create]
+
   root :to => 'flats#index'
 
   # The priority is based upon order of creation:

@@ -16,3 +16,5 @@
 <% @flat.images.each do |image| %>
   <%= image_tag image.photo.url(:thumb) %>
 <% end %>
+
+<%= link_to 'Book', new_message_path(:flat_id => @flat) %>
