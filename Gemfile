@@ -39,6 +39,8 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'will_paginate'
 gem 'paperclip'
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 group :test do
   gem 'factory_girl'
   gem 'factory_girl_rails'
