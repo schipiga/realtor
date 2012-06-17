@@ -39,6 +39,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'will_paginate'
 gem 'paperclip'
+gem 'devise'
 group :test do
   gem 'factory_girl'
   gem 'factory_girl_rails'

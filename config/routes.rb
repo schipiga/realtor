@@ -1,5 +1,7 @@
 Realtor::Application.routes.draw do
 
+  devise_for :users
+
   resources :flats, :only => [:index, :show]
 
   resources :messages, :only => [:new, :create]
