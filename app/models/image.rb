@@ -9,5 +9,5 @@ class Image < ActiveRecord::Base
                       :thumb => '250x150#'
                     }
   
-  attr_accessible :photo, :flat_id
+  attr_accessible :photo
 end

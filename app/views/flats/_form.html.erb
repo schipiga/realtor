@@ -1,10 +1,13 @@
 <%= simple_form_for @flat do |f|%>
+  <%= f.input :country, :as => :string %>
   <%= f.input :city %>
-  <%= f.input :country %>
   <%= f.input :flat_number %>
   <%= f.input :home_number %>
   <%= f.input :street %>
   <%= f.input :price %>
   <%= f.input :description %>
+  <%= f.input :image_1, :as => :file %>
+  <%= f.input :image_2, :as => :file %>
+  <%= f.input :image_3, :as => :file %>
   <%= f.button :submit %>
 <% end %>
