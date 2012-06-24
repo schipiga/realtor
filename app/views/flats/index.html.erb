@@ -1,12 +1,29 @@
-<h1>Квартиры</h1>
+<div class='index_title'>
+  <h1>Квартиры</h1>
+</div>
+
+<%= form_tag flats_path, :method => :get do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag 'Search', :name => nil %>
+<% end %>
+
+<% if !current_user %>
+  <%= link_to 'enter', user_session_path %>
+<% end %>
+
 <% @flats.each do |flat| %>
-  <div>
-    <%= flat.country %>,
-    <%= flat.city %>,
-    <%= flat.street %>,
-    <%= flat.home_number %>,
-    <%= flat.flat_number %>
-    <%= link_to 'Show', flat_path(flat) %>
+  <div class='index_list'>
+    country: <%= flat.country %>,
+    city: <%= flat.city %>,
+    street: <%= flat.street %>,
+    house: <%= flat.home_number %>,
+    flat: <%= flat.flat_number %>,
+    added: <%= flat.created_at.to_date %>
+    <div class ='index_show'>
+      <%= link_to image_tag('detail.png', :border => 1), flat_path(flat) %>
+    </div>
   </div>
 <% end %>
-<%= will_paginate @flats %>
+<div class='index_pagination'>
+  <%= will_paginate @flats %>
+</div>

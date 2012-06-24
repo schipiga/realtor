@@ -1,20 +1,42 @@
-<%= link_to 'Back', :back %>
-<h3>Price:</h3>
-<%= @flat.price %>
-<h3>Address:</h3>
-<div>
-  <%= @flat.country %>,
-  <%= @flat.city %>,
-  <%= @flat.street %>,
-  <%= @flat.home_number %>,
-  <%= @flat.flat_number %>
-</div>
-<h3>Description:</h3>
-<%= @flat.description %>
+<div class='show_content'>
 
-<h3>Images:</h3>
-<% @flat.images.each do |image| %>
-  <%= image_tag image.photo.url(:thumb) %>
+<span class='show_address_title'>
+  Address:
+</span>
+
+<span class='show_price'>
+  <%= @flat.price %>
+</span>
+
+<div class='show_address'>
+  country: <%= @flat.country %>,
+  city: <%= @flat.city %>,
+  street: <%= @flat.street %>,
+  house: <%= @flat.home_number %>,
+  flat: <%= @flat.flat_number %>
+</div>
+
+<p>
+
+<span class='show_description_title'>
+  Description:
+</span>
+
+<div class='show_description'>
+  <%= @flat.description %>
+</div>
+
+<% if @flat.images %>
+  <% @flat.images.each do |image| %>
+    <%= image_tag image.photo.url(:thumb) %>
+  <% end %>
 <% end %>
 
-<%= link_to 'Book', new_message_path(:flat_id => @flat) %>
+<p>
+
+<div class='show_links'>
+  <%= link_to '<< back', :back %>
+  <%= link_to 'book >>', new_message_path(:flat_id => @flat) %>
+</div>
+
+</div>

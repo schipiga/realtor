@@ -1,3 +1,50 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// index view //
+.index_list {
+  background: #eae0e0;
+  padding: auto;
+  margin: auto;
+    margin-top: 8px;
+  border: 1px solid black;
+  width: 768px;
+  height: 50px;
+}
+
+.index_show {
+  float: right;
+}
+
+.index_title {
+  text-align: center;
+}
+
+.index_pagination {
+  text-align: center;
+}
+
+// show view //
+.show_content {
+  margin: auto;
+  padding: auto;
+  border: 1px solid black;
+  width: 768px;
+}
+
+.show_address_title {
+  font-size: x-large;
+}
+
+.show_price {
+  float: right;
+}
+
+.show_description_title {
+  font-size: x-large;
+}
+
+.show_links {
+  text-align: center;
+}

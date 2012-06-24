@@ -1,6 +1,10 @@
 Realtor::Application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'registrations' }
+
+  namespace :user do
+    root :to => 'users#index'
+  end
 
   resources :flats, :only => [:index, :show]
 

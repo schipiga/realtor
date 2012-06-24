@@ -1,7 +1,10 @@
 class FlatsController < ApplicationController
 
   def index
-    @flats = Flat.paginate(:page => params[:page])
+    @search = Flat.search do
+      fulltext params[:search]
+    end
+    @flats = @search.results
   end
 
   def show

@@ -5,3 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.delete_all
+Flat.delete_all
+
+User.create!(:email => 'user@example.com',
+             :password => '123456')
+
+user = User.last
+
+100.times { |i|
+ user.flats.create!(:country => 'Russia',
+              :city => 'Kazan',
+              :flat_number => i + 1,
+              :home_number => 1,
+              :street => 'Lenina',
+              :price => '100$',
+              :description => 'Very beatiful apartament')
+}
+
+%x[rake sunspot:reindex]
